@@ -1,0 +1,230 @@
+*, *::before, *::after
+  box-sizing: border-box
+
+html, body, .site-wrapper
+  margin: 0
+  padding: 0
+  height: 100vh
+
+// Container
+
+.container
+  height: inherit
+  display: block
+  margin: 0 auto
+  width: 1024px
+
+  +media-query(palm)
+    width: 520px
+  +media-query(phone)
+    width: 480px
+  @media (max-width: 500px)
+    width: 80%
+  +media-query(tablet)
+    width: 700px
+  +media-query(desktop)
+    width: 920px
+  @media (min-width: 1400px)
+    width: 1024px
+
+// Clearfix
+
+.cf
+  &::before, &::after
+    content: " "
+    display:table
+  &::after
+    clear: both
+
+// Global Features
+
+.global-component
+  padding-top: $dsu
+  padding-bottom: $dsu
+.component
+  padding-bottom: $hsu
+.component--large
+  padding-bottom: $bsu
+
+// Font Bases
+
+h1, h2, h3, h4, h5, h6
+  display: block
+  width: 100%
+
+h1, h2, h3, h4, h5, h6, p, a, i
+  display: inline-block
+  margin-top: 0
+
+h1
+  color: $white
+  text-transform: uppercase
+  margin-bottom: 0
+  font:
+    family: $brand-font
+    size: 1em
+    weight: 700
+
+h2
+  color: $white
+  text-transform: uppercase
+  letter-spacing: 2px
+  font:
+    family: $brand-font
+    size: 12em
+    weight: 700
+
+h3
+  color: $white
+  text-transform: uppercase
+  margin-bottom: $hsu
+  letter-spacing: 4px
+  font:
+    family: $brand-font
+    size: 1.60em
+    weight: 600
+  +media-query(laptop)
+    font-size: 1.40em
+
+h4
+  color: $white
+  font:
+    family: $brand-font
+    size: 1em
+    weight: 600
+
+h5
+  color: $white
+  font:
+    family: $brand-font
+    size: 1em
+    weight: 400
+
+h6
+  color: $white
+  font:
+    family: $brand-font
+    size: 1em
+    weight: 400
+
+p
+  color: $gray
+  letter-spacing: 0.5px
+  line-height: 25px
+  font:
+    family: $base-font
+    size: 0.80em
+    weight: 400
+  &.bold, &.bold a
+    font:
+      family: $brand-font
+      weight: 600
+
+a
+  color: $green
+  text-decoration: none
+  cursor: hand
+  cursor: pointer
+  transition: color ease-in .3s
+  font:
+    family: $base-font
+    size: 1em
+    weight: 400
+  &:hover
+    color: darken($green, 10)
+
+
+i
+  color: $gray
+  font:
+    style: italic
+    family: $base-font
+    weight: 400
+  &.fa
+    color: $white
+    font:
+      style: normal
+      size: 2em
+      weight: normal
+
+input, textarea
+  font:
+    family: $brand-font
+    size: 1em
+    weight: 600
+  background: rgba(0,0,0,0.1)
+  border: 0
+  display: block
+  letter-spacing: 2.5px
+  color: $white
+  border-radius: 10px
+  margin-bottom: 25px
+  padding: $ssu $hsu
+  text-transform: none
+  vertical-align: middle
+  cursor: pointer
+  cursor: hand
+  -webkit-transition: background, 1s
+  -moz-transition: background, 1s
+  transition: background, 1s
+  outline: none
+
+  &::-webkit-input-placeholder
+    color: $white
+  &:-moz-placeholder
+    color: $white
+  &::-moz-placeholder
+    color: $white
+  &:-ms-input-placeholder
+    color: $white
+  &:placeholder-shown
+    color: $white
+
+textarea
+  min-height: $dsu + $hsu
+  height: 100%
+  padding-top: 25px
+  padding-bottom: 25px
+  resize: none
+
+.bold
+  letter-spacing: 0
+  color: $white
+  font:
+    family: $brand-font
+    weight: 600
+    size: 1em
+
+.title
+  position: relative
+  z-index: 1
+  height: auto!important
+  padding-top: 0
+  &.title--alternate h2
+    color: $white
+
+button
+  @extend h4
+  +media-query(laptop)
+    font-size: 0.90em
+
+
+// Misc
+img
+  display: inline-block
+  vertical-align: top
+  margin-bottom: $hsu
+
+.global
+  img
+    max-width: 100%
+    max-height: 100%
+    height: 150px
+    width: auto
+
+ul
+  list-style: none
+  margin-left: 0
+  text-align: right
+  li
+    text-align: right

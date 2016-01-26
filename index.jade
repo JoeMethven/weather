@@ -1,0 +1,27 @@
+doctype
+html(lang="en").main
+	include assets/templates/header
+
+	body
+
+		.site-wrapper
+			.search
+				input(type="text", placeholder="Location", id="loc-input")
+				ul#country-input
+					li.placeholder Country
+						i.fa.fa-angle-down
+					li(name="FR") France
+					li(name="GR") Germany
+					li(name="IRE") Ireland
+					li(name="UK") United Kingdom
+					li(name="US") United States
+				input(type="submit", value="Submit", id="loc-submit")
+			
+			.temp
+				h2#temp-number
+			
+			.map-wrapper
+				#map
+			
+		// Importing jquery.js
+		include assets/templates/scripts

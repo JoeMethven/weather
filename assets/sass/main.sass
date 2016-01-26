@@ -1,0 +1,32 @@
+@charset 'UTF-8'
+
+// #####################################################
+// ############### Importing directories ###############
+// #####################################################
+
+// Additionals #############################################
+// Sass Mixins for extra coolness
+@import bourbon
+// FontAwesome for awesome icons
+@import ../fonts/fontawesome/font-awesome.css
+
+// Helpers #############################################
+@import helpers/all.sass
+// base.sass - Base styling for basic tags
+// mixins.sass - Mixins for complex/repetitive styling
+// typography.sass - Font integration
+// vars.sass - All sass variables (spacing, colour etc.)
+// #####################################################
+// Components ##########################################
+@import components/all.sass
+// navigation.sass - Navigation styling
+// hero.sass - Slider/feature image styling
+// footer.sass - Footer styling
+// #####################################################
+// Pages ###############################################
+@import modules/all.sass
+// All primary navigation sections are given there own
+// styling section for fixes or layout alterations.
+// If a specific page is very complex it may be given
+// it's own .sass file within the specified directory.
+// #####################################################
